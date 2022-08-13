@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- @NOTE linking our CSS -->
+    <link rel="stylesheet" href="comms.css" />
+
+    <!-- @NOTE linking firebase version 8 CDNs first -->
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"
+    ></script>
+
+    <!-- @NOTE initializing firebase -->
+    <script defer src="fire.js"></script>
+
+    <!-- @NOTE link our main.js AFTER we load initialize firebase -->
+    <script defer src="data.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Fire Messages 2.0</title>
+  </head>
+
+  <body>
+    <h1>Welcome To DXT Fitness</h1>
+    <div id="nav">
+        <img class="items logo" src="images/logo.jpg">
+        <a href="index.html"><div class="items">About</div></a>
+        <a href="daily.html"><div class="items">Daily Routine</div></a>
+        <a href="nutritien.html"><div class="items">Nutrition and Diet</div></a>
+        <a href="coaches.html"><div class="items">Coaches</div></a>
+        <a href="gyms.html"><div class="items">Gyms</div></a>
+        <a href="equipment.html"><div class="items">At Home Equipment</div></a>
+        <a href="promo.html"><div class="items">Promo Code</div></a>
+        <a href="community.html"><div class="items">Message Board</div></a>
+        <a href="info.html"><div class="items">Contact Info</div></a>
+    </div>
+    <!--Add your name-->
+    <h1>DXT Community Message Board</h1>
+
+    
+
+    <!--This div will be populated with messages-->
+    <div class="allMessages"></div>
+
+    <!--For user to input messages-->
+    <div class="userContainer">
+      <form>
+        <div class="inputContainer">
+          <div class="singleInput">
+            <label for="username">Your name:</label>
+            <input id="username" type="text" />
+          </div>
+          <div class="singleInput">
+            <label for="message">Message:</label>
+            <input id="message" type="text" />
+          </div>
+        </div>
+        <button id="submitButton">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
